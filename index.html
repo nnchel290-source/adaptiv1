@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8" />
+<title>Profile – Sayan</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: sans-serif;
+        background: #f4f6fa;
+    }
+
+    .sidebar {
+        width: 80px;
+        background: white;
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 0;
+        padding-top: 40px;
+        border-right: 1px solid #eee;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .sidebar svg {
+        width: 28px;
+        height: 28px;
+        padding: 8px;
+        border-radius: 12px;
+        background: #eef3ff;
+        fill: #3d6cff;
+    }
+
+    .header {
+        margin-left: 80px;
+        padding: 30px 40px;
+        background: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #eee;
+    }
+
+    .search {
+        width: 260px;
+        padding: 10px 15px;
+        border-radius: 10px;
+        border: 1px solid #ddd;
+    }
+
+    .user-img {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background: #ccc;
+    }
+
+    .content {
+        margin-left: 80px;
+        padding: 30px 40px;
+    }
+
+    .profile-card {
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+    }
+
+    .profile-top {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+
+    .avatar {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: #bbb;
+        object-fit: cover;
+    }
+
+    .edit-btn {
+        margin-left: auto;
+        padding: 10px 20px;
+        background: #297bff;
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .input-block {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    input, select {
+        padding: 15px;
+        border: none;
+        background: #f7f7f7;
+        border-radius: 10px;
+    }
+
+    .email-block {
+        margin-top: 40px;
+    }
+
+    .email-item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-top: 15px;
+        padding: 15px;
+        background: #f7f7f7;
+        border-radius: 10px;
+        width: 350px;
+    }
+
+    .add-email {
+        margin-top: 20px;
+        padding: 12px 20px;
+        width: 200px;
+        background: #e9f1ff;
+        border-radius: 10px;
+        color: #297bff;
+        cursor: pointer;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="sidebar">
+    <svg viewBox="0 0 24 24">
+        <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/>
+    </svg>
+
+    <svg viewBox="0 0 24 24">
+        <path d="M12 1a11 11 0 1 0 11 11A11 11 0 0 0 12 1Zm.75 11.19 3.72 2.21-.75 1.23-4.47-2.69V6.5h1.5Z"/>
+    </svg>
+
+    <svg viewBox="0 0 24 24">
+        <path d="M12 1a7 7 0 1 0 7 7a7 7 0 0 0-7-7Zm4.3 14.9l-2.1-.9l-2.2 2.1l.4 2.2l-1.4-.8l-1.4.8l.4-2.2l-2.2-2.1l-2.1.9l1.1-2l-1.1-2l2.1.9l2.2-2.1l-.4-2.2l1.4.8l1.4-.8l-.4 2.2l2.2 2.1l2.1-.9l-1.1 2l1.1 2Z"/>
+    </svg>
+
+    <svg viewBox="0 0 24 24">
+        <path d="M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2Z"/>
+    </svg>
+
+    <svg viewBox="0 0 24 24">
+        <path d="M12 8a4 4 0 1 0 4 4a4 4 0 0 0-4-4Zm10 4a2 2 0 0 1-1.45 1.92a7.8 7.8 0 0 1-.33.79l1 1.7l-1.41 1.41l-1.7-1a7.8 7.8 0 0 1-.79.33A2 2 0 0 1 12 22a2 2 0 0 1-1.92-1.45a7.8 7.8 0 0 1-.79-.33l-1.7 1l-1.41-1.41l1-1.7a7.8 7.8 0 0 1-.33-.79A2 2 0 0 1 2 12a2 2 0 0 1 1.45-1.92a7.8 7.8 0 0 1 .33-.79l-1-1.7L4.19 6l1.7 1a7.8 7.8 0 0 1 .79-.33A2 2 0 0 1 12 2a2 2 0 0 1 1.92 1.45a7.8 7.8 0 0 1 .79.33l1.7-1l1.41 1.41l-1 1.7a7.8 7.8 0 0 1 .33.79A2 2 0 0 1 22 12Z"/>
+    </svg>
+</div>
+
+<div class="header">
+    <div>
+        <h2>Welcome, Sayan</h2>
+        <p style="color: #999; margin-top: -5px;">Tue, 07 June 2022</p>
+    </div>
+
+    <div style="display: flex; align-items: center; gap: 20px;">
+        <input type="text" placeholder="Search" class="search">
+        <div class="user-img"></div>
+    </div>
+</div>
+
+<div class="content">
+    <div class="profile-card">
+
+        <div class="profile-top">
+            <img src="https://i.pravatar.cc/150?img=12" class="avatar">
+
+            <div>
+                <h3 style="margin: 0;">Саян</h3>
+                <p style="margin: 0; color: gray;">sayan16@gmail.com</p>
+            </div>
+
+            <div class="edit-btn">Edit</div>
+        </div>
+
+        <div class="grid">
+            <div class="input-block">
+                <label>Full Name</label>
+                <input type="text" value="Саян">
+            </div>
+
+            <div class="input-block">
+                <label>Nick Name</label>
+                <input type="text" value="Sayan16">
+            </div>
+
+            <div class="input-block">
+                <label>Age</label>
+                <input type="text" value="16">
+            </div>
+
+            <div class="input-block">
+                <label>Country</label>
+                <input type="text" value="Kazakhstan">
+            </div>
+
+            <div class="input-block">
+                <label>Language</label>
+                <input type="text" value="Kazakh">
+            </div>
+
+            <div class="input-block">
+                <label>Time Zone</label>
+                <input type="text" value="GMT+6">
+            </div>
+        </div>
+
+        <div class="email-block">
+            <h3>My Email Address</h3>
+
+            <div class="email-item">
+                <div style="width:35px;height:35px;background:#297bff;border-radius:8px;"></div>
+                <div>
+                    <b>sayan16@gmail.com</b><br>
+                    <span style="color: gray;">1 month ago</span>
+                </div>
+            </div>
+
+            <div class="add-email">+ Add Email Address</div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
